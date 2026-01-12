@@ -12,6 +12,8 @@ The following platforms are supported by Mend Renovate Community Edition and Ent
 - GitLab Cloud
 - GitLab Enterprise Edition
 - Bitbucket Data Center
+- Azure DevOps Services
+- Azure DevOps Server
 
 ## Documentation contents
 
@@ -21,6 +23,7 @@ The following platforms are supported by Mend Renovate Community Edition and Ent
    - [Setup guide for GitHub](setup-for-github.md)
    - [Setup guide for GitLab](setup-for-gitlab.md)
    - [Setup guide for Bitbucket Data Center](setup-for-bitbucket-data-center.md)
+   - [Setup guide for Azure DevOps](setup-for-azure-devops.md)
 4. Configuration
    - [Self-hosted App configuration options](configuration-options.md)
    - [Example Renovate CE Docker Compose](../examples/docker-compose/docker-compose-renovate-community.yml)

@@ -35,8 +35,10 @@ Check the [docs directory](../docs) for information about additional variables a
 
 ### Env file templates
 
-| File              | Description                                                                                  |
-|-------------------|----------------------------------------------------------------------------------------------|
-| mend-renovate.env | Env vars associated with the Mend Renovate application. Includes License key and API secret. |
-| github.env        | Env vars for connecting Mend Renovate to a Renovate App on GitHub                            |
-| gitlab.env        | Env vars for connecting Mend Renovate to a Renovate Bot user account on GitLab               |
+| File                  | Description                                                                                  |
+|-----------------------|----------------------------------------------------------------------------------------------|
+| mend-renovate.env     | Env vars associated with the Mend Renovate application. Includes License key and API secret. |
+| github.env            | Env vars for connecting Mend Renovate to a Renovate App on GitHub                            |
+| gitlab.env            | Env vars for connecting Mend Renovate to a Renovate Bot user account on GitLab               |
+| bitbucket-server.env  | Env vars for connecting Mend Renovate to a Renovate Bot user account on Bitbucket Data Center |
+| azure-devops.env      | Env vars for connecting Mend Renovate to a Renovate Bot user account on Azure DevOps         |

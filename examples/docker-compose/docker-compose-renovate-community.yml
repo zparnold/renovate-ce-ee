@@ -18,6 +18,7 @@ services:
       - ../env/github.env
       # - ../env/gitlab.env
       # - ../env/bitbucket.env
+      # - ../env/azure-devops.env
       # Import optional settings for Renovate CE
       # - ../env/renovate-server-config.env # Set 'MEND_RNV_SERVER_HOSTNAME' to match server container (ie. http://rnv-ee-server:8080)
       # - ../env/renovate-core.env # Set Renovate CLI configuration options. (ie. `RENOVATE_REPOSITORY_CACHE=enabled`)
