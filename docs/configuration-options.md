@@ -57,7 +57,7 @@ Environment variables for the **Mend Renovate Enterprise Worker** are in the nex
 This section contains configuration variables for connecting to your source code repository.
 Use the appropriate settings to define connection details to your specific SCM.
 
-**`MEND_RNV_PLATFORM`**: The type of SCM. Options: `github`, `gitlab`, `bitbucket-server`.
+**`MEND_RNV_PLATFORM`**: The type of SCM. Options: `github`, `gitlab`, `bitbucket-server`, `azure-devops`.
 
 **`MEND_RNV_ENDPOINT`**: This is the API endpoint for your SCM. Not required for GitHub.com. Include the trailing slash.
 
@@ -82,6 +82,10 @@ Note: By default Renovate server will attempt to call this endpoint once during 
 
 **`MEND_RNV_BITBUCKET_PAT`**: BitBucket access token for the bot user `MEND_RNV_BITBUCKET_USER`
 
+#### Azure DevOps connection variables
+
+**`MEND_RNV_AZURE_DEVOPS_PAT`**: Personal Access Token for the Azure DevOps bot account. Required permissions: Code (Read & Write), Pull Request Threads (Read & Write), User Profile (Read).
+
 ### Server Config Options
 
 **`GITHUB_COM_TOKEN`**: A Personal Access Token for a user account on github.com (i.e. _not_ an account on your GitHub Enterprise instance).
@@ -90,10 +94,10 @@ It needs only read-only access privileges. Not required if SCM is GitHub.com.
 
 **`MEND_RNV_WEBHOOK_SECRET`**: Optional: Defaults to `renovate`
 
-**`MEND_RNV_WEBHOOK_URL`**: [GitLab, Bitbucket Data Center only] Optional.
+**`MEND_RNV_WEBHOOK_URL`**: [GitLab, Bitbucket Data Center, Azure DevOps only] Optional.
 When set, webhooks will be installed on repos when Renovate is enabled.
 The URL of the Renovate Server plus '/webhook'. (e.g. `http://renovate.yourcompany.com:8080/webhook` or `https://1.2.3.4/webhook`)
-Must be accessible to receive incoming calls from the BitBucket Data Center.
+Must be accessible to receive incoming calls from the SCM platform.
 
 ** `MEND_RNV_WEBHOOK_BASE_BRANCHES`: Optional: Set to add values to the default base branches list that are considered for webhook evens (default list: `['master', 'main', 'develop']`)
 
@@ -121,9 +125,9 @@ values:
 
 
 
-**`MEND_RNV_ADMIN_TOKEN`**: [GitLab, Bitbucket Data Center only] Optional: A token used for searching/add/removing repository webhooks.
-Defaults to the primary Renovate user PAT when not provided in GitLab config.
-Important: Webhooks will be only installed on repos that the account has at least `Maintainer` access to.
+**`MEND_RNV_ADMIN_TOKEN`**: [GitLab, Bitbucket Data Center, Azure DevOps only] Optional: A token used for searching/add/removing repository webhooks.
+Defaults to the primary Renovate user PAT when not provided in GitLab or Azure DevOps config.
+Important: Webhooks will be only installed on repos that the account has appropriate permissions to manage webhooks.
 
 ** `MEND_RNV_API_ENABLED`: Optional: Set to 'true' to enable System, Jobs, and Reporting [APIs](./api.md). Defaults to 'false'. (renamed from `MEND_RNV_ADMIN_API_ENABLED`)
 
