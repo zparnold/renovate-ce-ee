@@ -71,14 +71,14 @@ renovateServer:
   # Renovate Bot user account (Bitbucket "User" access only)
   mendRnvBitbucketUser:
 
-  # BitBucket access token for the bot user
+  # Bitbucket access token for the bot user
   mendRnvBitbucketPat:
 
   # Personal Access Token for bot account (Azure DevOps only)
   mendRnvAzureDevopsPat:
 
   # Optional: The URL of the Renovate Server plus '/webhook' suffix.
-  # Must be accessible to receive incoming calls from GitLab, BitBucket Data Center, or Azure DevOps.
+  # Must be accessible to receive incoming calls from GitLab, Bitbucket Data Center, or Azure DevOps.
   mendRnvWebhookURL:
 
   # Optional: A token used for searching/adding/removing repository webhooks.

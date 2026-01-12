@@ -97,7 +97,7 @@ It needs only read-only access privileges. Not required if SCM is GitHub.com.
 **`MEND_RNV_WEBHOOK_URL`**: [GitLab, Bitbucket Data Center, Azure DevOps only] Optional.
 When set, webhooks will be installed on repos when Renovate is enabled.
 The URL of the Renovate Server plus '/webhook'. (e.g. `http://renovate.yourcompany.com:8080/webhook` or `https://1.2.3.4/webhook`)
-Must be accessible to receive incoming calls from the SCM platform.
+Must be accessible to receive incoming calls from GitLab, Bitbucket Data Center, or Azure DevOps.
 
 ** `MEND_RNV_WEBHOOK_BASE_BRANCHES`: Optional: Set to add values to the default base branches list that are considered for webhook evens (default list: `['master', 'main', 'develop']`)
 
