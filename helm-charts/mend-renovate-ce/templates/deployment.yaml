@@ -132,6 +132,15 @@ spec:
                   key: mendRnvBitbucketPat
                   optional: true
             {{- end }}
+            # Azure DevOps
+            {{- if or .Values.renovate.mendRnvAzureDevopsPat .Values.renovate.existingSecret }}
+            - name: MEND_RNV_AZURE_DEVOPS_PAT
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "mend-renovate.secret-name" . }}
+                  key: mendRnvAzureDevopsPat
+                  optional: true
+            {{- end }}
             # PostgrSQL database
             {{- if .Values.postgresql.enabled }}
             - name: MEND_RNV_DATA_HANDLER_TYPE

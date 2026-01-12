@@ -22,7 +22,7 @@ renovate:
   mendRnvLicenseKey:
 
   # Which platform Mend Renovate will connect to.
-  # valid values: "bitbucket-server", "github" or "gitlab"
+  # valid values: "azure-devops", "bitbucket-server", "github" or "gitlab"
   mendRnvPlatform:
 
   # API endpoint, include trailing slash. Examples: https://api.github.com/, https://gitlab.com/api/v4/
@@ -47,8 +47,11 @@ renovate:
   # BitBucket access token for the bot user
   mendRnvBitbucketPat:
 
+  # Personal Access Token for bot account (Azure DevOps only)
+  mendRnvAzureDevopsPat:
+
   # Optional: The URL of the Renovate Server plus '/webhook' suffix.
-  # Must be accessible to receive incoming calls from BitBucket Data Center.
+  # Must be accessible to receive incoming calls from GitLab, BitBucket Data Center, or Azure DevOps.
   mendRnvWebhookURL:
 
   # Optional: A token used for searching/adding/removing repository webhooks.
